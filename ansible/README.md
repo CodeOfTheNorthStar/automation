@@ -6,7 +6,7 @@ you tell ansible where the inventory file is (inventory is the place where u sto
 <img src="./readme_static/Pasted%20image%2020220325233135.png">
 
 ##### test the connections:
-```
+```bash
  ansible all -m ping -i hosts
 ```
 
@@ -18,7 +18,8 @@ vars ( "{{ I AM A VAR }}" ) live in
 <img src="./readme_static/Pasted%20image%2020220325233314.png">
 <img src="./readme_static/Pasted%20image%2020220325233304.png">
 ### create a secret thingy
-```
+
+```bash
 ansible-vault create secret.yml
 ansible-vault edit secret.yml
 ```
@@ -27,7 +28,7 @@ ansible-vault edit secret.yml
 remember capital K!
 second one without asking for root pass(-K) is cause we disabled it in a task!
 
-~~~
+```bash
 ansible-playbook run.yml -K --ask-vault-pass -i hosts
 ansible-playbook run.yml --ask-vault-pass -i hosts
-~~~
+```
