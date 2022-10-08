@@ -1,0 +1,31 @@
+; [luna]
+; 192.168.77.130
+
+; [mars]
+; 192.168.77.131
+
+[homeserver]
+192.168.1.13
+
+[all]
+; 192.168.77.130
+; 192.168.77.131
+192.168.1.13
+
+; [all:vars]
+; ansible_user=canaan
+
+; [luna:vars]
+; ansible_user=canaan
+; ansible_connection=ssh
+; ansible_ssh_private_key_file=/home/terra/.ssh/luna
+
+; [mars:vars]
+; ansible_user=canaan
+; ansible_connection=ssh
+; ansible_ssh_private_key_file=/home/terra/.ssh/mars
+
+[homeserver:vars]
+ansible_user=mars
+ansible_connection=ssh
+ansible_ssh_private_key_file=/home/luna/.ssh/homeserver

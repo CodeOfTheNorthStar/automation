@@ -1,0 +1,7 @@
+username: canaan
+packages:
+  - vim
+  - htop
+  - neofetch
+  - tmux
+  - speedtest-cli
